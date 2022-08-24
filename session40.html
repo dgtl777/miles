@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 40</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(palegreen,green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: green;
+        }
+        img{
+            width: 300px;
+            border: 10px solid white;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><u>Riddle App</u></h1>
+        <h2 id="score">0</h2>
+    </header>
+    <h5>1. What has to be broken before you can use it?</h5>
+    <input type="text" name="" id="a1">
+    <button onclick="q1()">Submit Answer</button>
+    <button onclick="h1()">Hint</button>
+    <h5 id="result1"></h5>
+    <img id="h1" src="https://cdn.pixabay.com/photo/2016/11/18/14/39/beans-1834984__340.jpg" alt="">
+
+    <h5>2. I can be cracked, made, told and played, what am I?</h5>
+    <input type="text" name="" id="a2">
+    <button onclick="q2()">Submit Answer</button>
+    <button onclick="h2()">Hint</button>
+    <h5 id="result2"></h5>
+    <img id="h2" src="https://cdn.pixabay.com/photo/2016/11/18/14/39/beans-1834984__340.jpg" alt="">
+    
+</body>
+<script>
+    var temp2 = false;
+    function h2(){
+        if(temp2 == false){
+            document.getElementById("h2").style.display = "none";
+            temp2 = true
+        }
+        else{
+            document.getElementById("h2").style.display= "inline-block";
+            temp2 = false;
+        }
+    }
+
+    var score = 0;
+    function q2(){
+        var a2 = document.getElementById("a2").value;
+        if(a2 == "joke"){
+            document.getElementById("result2").innerText = 
+            "Correct Answer";
+            score = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+        else{
+            document.getElementById("result2").innerText = 
+            "Wrong Answer";
+        }
+    }
+
+
+    var temp1 = false;
+    function h1(){
+        if(temp1 == false){
+            document.getElementById("h1").style.display = "none";
+            temp1 = true
+        }
+        else{
+            document.getElementById("h1").style.display= "inline-block";
+            temp1 = false;
+        }
+    }
+
+    function q1(){
+        var a1 = document.getElementById("a1").value;
+        if(a1 == "egg"){
+            document.getElementById("result1").innerText = 
+            "Correct Answer";
+            score = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+        else{
+            document.getElementById("result1").innerText = 
+            "Wrong Answer";
+        }
+    }
+</script>
+</html>

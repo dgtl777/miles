@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 43</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 200vh;
+            background-image: linear-gradient(yellow,orange);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: orangered;
+        }
+        .main{
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            margin: auto;
+            position: sticky;
+            top: 0;
+        }
+        .first{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-name: first;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes first {
+            from{
+                top: 0;
+                left: 0;
+            }
+            to{
+                top: 150px;
+                left: 150px;
+            }
+        }
+        .second{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+        }
+        .third{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation-name: third;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 1s;
+        }
+
+        @keyframes third {
+            from{
+                top: 0;
+                right: 0;
+            }
+            to{
+                top: 150px;
+                right: 150px;
+            }
+        }
+        .forth{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            animation-name: forth;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 2s;
+        }
+
+        @keyframes forth {
+            from{
+                bottom: 0;
+                right: 0;
+            }
+            to{
+                bottom: 150px;
+                right: 150px;
+            }
+        }
+        
+        .fifth{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation-name: fifth;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 3s;
+        }
+
+        @keyframes fifth {
+            from{
+                bottom: 0;
+                left: 0;
+            }
+            to{
+                bottom: 150px;
+                left: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Positioning Elements</h1>
+    </header>
+    <div class="main">
+        <div class="second"></div>
+        <div class="first"></div>
+        <div class="third"></div>
+        <div class="forth"></div>
+        <div class="fifth"></div>
+    </div>
+    
+</body>
+</html>
